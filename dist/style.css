@@ -6,7 +6,12 @@
   margin: 0;
 }
 
-.homepage-image {
-  width: 200px;
-  height: auto;
-}
+.home {}
+
+.contact {}
+
+.menu {}
+
+.menu-item {}
+
+.menu-item img {}
