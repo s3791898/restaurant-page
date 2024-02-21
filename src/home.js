@@ -1,14 +1,21 @@
+import chefTeamImage from "/src/images/chefs.jpg";
+
 function createHome() {
   const home = document.createElement("div");
   home.classList.add("home");
 
-  const chefsImage = document.createElement("img");
-  chefsImage.src = "/dist/images/chefs.jpg";
-  chefsImage.alt = "Korean Food";
+  const heading = document.createElement("h1");
+  heading.classList.add("home-heading");
+  heading.textContent = "Welcome to Korean Palace";
+  home.appendChild(heading);
+
+  const chefsImage = new Image();
+  chefsImage.src = chefTeamImage;
+  chefsImage.alt = "Korean Chefs";
   home.appendChild(chefsImage);
 
   const paragraph1 = createParagraph(
-    "Welcome to Korean Palace, your destination for authentic Korean cuisine!"
+    "Your destination for authentic Korean cuisine!"
   );
   const paragraph2 = createParagraph(
     "At Korean Palace, we pride ourselves on serving delicious and flavorful dishes that capture the essence of Korean flavors."

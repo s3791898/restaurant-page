@@ -1,4 +1,4 @@
-import "./style.css";
+import "./styles/style.css";
 import loadHome from "./home";
 import loadMenu from "./menu";
 import loadContact from "./contact";
@@ -65,13 +65,22 @@ function createFooter() {
   copyright.textContent = `Copyright © ${new Date().getFullYear()} s3791898`;
 
   const githubLink = document.createElement("a");
-  githubLink.href = "https://github.com/s3791898";
+  githubLink.href = "https://github.com/s3791898/restaurant-page";
+  githubLink.target = "_blank";
+  githubLink.rel = "noopener noreferrer";
+
+  const repositoryButton = document.createElement("button");
+  repositoryButton.classList.add("repo-btn");
 
   const githubIcon = document.createElement("i");
-  githubIcon.classList.add("fab");
+  githubIcon.classList.add("fa-brands");
   githubIcon.classList.add("fa-github");
 
-  githubLink.appendChild(githubIcon);
+  const buttonText = document.createTextNode("GitHub Repository");
+  repositoryButton.appendChild(githubIcon);
+  repositoryButton.appendChild(buttonText);
+
+  githubLink.appendChild(repositoryButton);
   footer.appendChild(copyright);
   footer.appendChild(githubLink);
 

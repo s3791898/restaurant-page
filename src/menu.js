@@ -2,7 +2,7 @@ function createMenu() {
   const menu = document.createElement("div");
   menu.classList.add("menu");
 
-  const menuTitle = document.createElement("h2");
+  const menuTitle = document.createElement("h1");
   menuTitle.textContent = "Our Menu";
   menuTitle.classList.add("menu-title");
   main.appendChild(menuTitle);
@@ -58,7 +58,7 @@ function createMenuItem(name, description) {
   menuItemDescription.textContent = description;
 
   const menuItemImage = document.createElement("img");
-  menuItemImage.src = `/dist/images/korean-food/${name.toLowerCase()}.jpg`;
+  menuItemImage.src = `/src/images/korean-food/${name.toLowerCase()}.jpg`;
 
   menuItem.appendChild(menuItemName);
   menuItem.appendChild(menuItemImage);
