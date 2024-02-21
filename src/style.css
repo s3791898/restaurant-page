@@ -8,6 +8,11 @@
   --background-dark: rgba(0, 0, 0, 0.9);
 }
 
+@font-face {
+  font-family: "noto-sans";
+  src: url(./noto-sans.ttf) format("truetype");
+}
+
 *,
 *::before,
 *::after {
@@ -17,8 +22,9 @@
 }
 
 body {
+  font-family: "noto-sans";
   font-size: 1.4rem;
-  background-image: url(images/background.jpg);
+  background-image: url(/dist/images/background.jpg);
   color: var(--white-font);
   background-attachment: fixed;
   background-size: cover;
@@ -45,17 +51,40 @@ body {
 }
 
 /* Contact */
-.contact {}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .contact img {
   max-width: 450px;
 }
 
-.menu {}
+/* Menu */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1.4rem;
+}
 
-.menu-item {}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-.menu-item img {}
+.menu-item img {
+  max-width: 200px;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
 
 /* Main */
 .main {

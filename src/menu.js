@@ -2,6 +2,11 @@ function createMenu() {
   const menu = document.createElement("div");
   menu.classList.add("menu");
 
+  const menuTitle = document.createElement("h2");
+  menuTitle.textContent = "Our Menu";
+  menuTitle.classList.add("menu-title");
+  main.appendChild(menuTitle);
+
   menu.appendChild(
     createMenuItem(
       "Bibimbap",
@@ -38,6 +43,8 @@ function createMenu() {
       "Korean street food made with chewy rice cakes stir-fried in a spicy-sweet gochujang sauce"
     )
   );
+
+  return menu;
 }
 
 function createMenuItem(name, description) {
@@ -51,7 +58,7 @@ function createMenuItem(name, description) {
   menuItemDescription.textContent = description;
 
   const menuItemImage = document.createElement("img");
-  menuItemImage.src = `/dist/images/korean-food/${name.toLowerCase()}.png`;
+  menuItemImage.src = `/dist/images/korean-food/${name.toLowerCase()}.jpg`;
 
   menuItem.appendChild(menuItemName);
   menuItem.appendChild(menuItemImage);
