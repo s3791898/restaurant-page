@@ -1,15 +1,17 @@
-// This js file will import all the necessary methods
-// And this will export 1 function to index.js that handles everything
-// Need to add event listeners to each button in the nav bar (home, contact, and menu)
 import loadHome from "./home";
 import loadMenu from "./menu";
 import loadContact from "./contact";
 
-// Still working on this
-// the nav needs to be appended to the header section
 function createHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
+
+  const restaurantName = document.createElement("h1");
+  restaurantName.classList.add("title");
+  restaurantName.textContent = "Korean Palace";
+
+  header.appendChild(restaurantName);
+  header.appendChild(createNav());
 
   return header;
 }
@@ -17,6 +19,31 @@ function createHeader() {
 function createNav() {
   const nav = document.createElement("nav");
   nav.classList.add("nav");
+
+  const homeBtn = document.createElement("button");
+  homeBtn.classList.add("nav-btn");
+  homeBtn.textContent = "Home";
+  homeBtn.addEventListener("click", (e) => {
+    loadHome();
+  });
+
+  const menuBtn = document.createElement("button");
+  menuBtn.classList.add("nav-btn");
+  menuBtn.textContent = "Menu";
+  menuBtn.addEventListener("click", (e) => {
+    loadMenu();
+  });
+
+  const contactBtn = document.createElement("button");
+  contactBtn.classList.add("nav-btn");
+  contactBtn.textContent = "Contact";
+  contactBtn.addEventListener("click", (e) => {
+    loadContact();
+  });
+
+  nav.appendChild(homeBtn);
+  nav.appendChild(menuBtn);
+  nav.appendChild(contactBtn);
 
   return nav;
 }
@@ -29,16 +56,33 @@ function createMain() {
   return main;
 }
 
-// Still working on this
-
 function createFooter() {
   const footer = document.createElement("footer");
   footer.classList.add("footer");
+
+  const copyright = document.createElement("p");
+  copyright.textContent = `Copyright © ${new Date().getFullYear()} s3791898`;
+
+  const githubLink = document.createElement("a");
+  githubLink.href = "https://github.com/s3791898";
+
+  const githubIcon = document.createElement("i");
+  githubIcon.classList.add("fab");
+  githubIcon.classList.add("fa-github");
+
+  githubLink.appendChild(githubIcon);
+  footer.appendChild(copyright);
+  footer.appendChild(githubLink);
 
   return footer;
 }
 
 export default function generateWebsite() {
-  // the homepage will be the initial page shown when the page is first loaded
+  const content = document.getElementById("content");
+
+  content.appendChild(createHeader());
+  content.appendChild(createMain());
+  content.appendChild(createFooter());
+
   loadHome();
 }

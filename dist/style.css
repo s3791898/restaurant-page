@@ -1,3 +1,13 @@
+:root {
+  --white-font: #FFFFFF;
+  --font-color: #eee;
+  --font-color-dark: #aaa;
+  --border-color: #222;
+  --background-light: rgba(0, 0, 0, 0.6);
+  --background-light-hover: rgba(99, 99, 99, 0.4);
+  --background-dark: rgba(0, 0, 0, 0.9);
+}
+
 *,
 *::before,
 *::after {
@@ -6,9 +16,40 @@
   margin: 0;
 }
 
-.home {}
+body {
+  font-size: 1.4rem;
+  background-image: url(images/background.jpg);
+  color: var(--white-font);
+  background-attachment: fixed;
+  background-size: cover;
+}
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* Home */
+.home {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+
+.home p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Contact */
 .contact {}
+
+.contact img {
+  max-width: 450px;
+}
 
 .menu {}
 
@@ -16,10 +57,43 @@
 
 .menu-item img {}
 
-.main {}
+/* Main */
+.main {
+  max-width: 700px;
+  padding: 4rem;
+  margin: 6rem 0;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+}
 
-.header {}
-
-.footer {}
+/* Header Section */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-light);
+  width: 100%;
+  padding-bottom: 1rem;
+}
 
 .nav {}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--background-light);
+}
+
+.fa-github {
+  font-size: 2rem;
+}
+
+.fa-github:hover {
+  color: var(--font-color-dark);
+}
