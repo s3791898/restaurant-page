@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _web
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction createMenu() {\n  const menu = document.createElement(\"div\");\n  menu.classList.add(\"menu\");\n\n  const menuTitle = document.createElement(\"h1\");\n  menuTitle.textContent = \"Our Menu\";\n  menuTitle.classList.add(\"menu-title\");\n  main.appendChild(menuTitle);\n\n  menu.appendChild(\n    createMenuItem(\n      \"Bibimbap\",\n      \"Delicious Korean rice dish with mixed vegetables, meat, sesame oil, and gochujang\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Jajangmyeon\",\n      \"Korean noodle dish consisting of a rich, dark sauce made from black bean paste then poured over fresh noodles\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Kimbap\",\n      \"Made from cooked rice, vegetables, egg and meat rolled in gim (a dried sheet of seaweed)\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Naengmyeon\",\n      \"Buckwheat noodles served in a cold broth made with beef brisket or beef shank\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Samgyetang\",\n      \"Traditional korean soup made with a whole young chicken stuffed with sticky rice, ginseng, jujube, garlic and ginger\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Tteokbokki\",\n      \"Korean street food made with chewy rice cakes stir-fried in a spicy-sweet gochujang sauce\"\n    )\n  );\n\n  return menu;\n}\n\nfunction createMenuItem(name, description) {\n  const menuItem = document.createElement(\"div\");\n  menuItem.classList.add(\"menu-item\");\n\n  const menuItemName = document.createElement(\"h2\");\n  menuItemName.textContent = name;\n\n  const menuItemDescription = document.createElement(\"p\");\n  menuItemDescription.textContent = description;\n\n  const menuItemImage = document.createElement(\"img\");\n  menuItemImage.src = `/src/images/korean-food/${name.toLowerCase()}.jpg`;\n  menuItemImage.alt = `${name}`;\n\n  menuItem.appendChild(menuItemName);\n  menuItem.appendChild(menuItemImage);\n  menuItem.appendChild(menuItemDescription);\n\n  return menuItem;\n}\n\nfunction loadMenu() {\n  const main = document.getElementById(\"main\");\n  main.textContent = \"\";\n  main.appendChild(createMenu());\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n/* harmony import */ var _src_images_korean_food_bibimbap_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/images/korean-food/bibimbap.jpg */ \"./src/images/korean-food/bibimbap.jpg\");\n/* harmony import */ var _src_images_korean_food_jajangmyeon_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/images/korean-food/jajangmyeon.jpg */ \"./src/images/korean-food/jajangmyeon.jpg\");\n/* harmony import */ var _src_images_korean_food_kimbap_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/images/korean-food/kimbap.jpg */ \"./src/images/korean-food/kimbap.jpg\");\n/* harmony import */ var _src_images_korean_food_naengmyeon_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../src/images/korean-food/naengmyeon.jpg */ \"./src/images/korean-food/naengmyeon.jpg\");\n/* harmony import */ var _src_images_korean_food_samgyetang_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../src/images/korean-food/samgyetang.jpg */ \"./src/images/korean-food/samgyetang.jpg\");\n/* harmony import */ var _src_images_korean_food_tteokbokki_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../src/images/korean-food/tteokbokki.jpg */ \"./src/images/korean-food/tteokbokki.jpg\");\n\n\n\n\n\n\n\nfunction createMenu() {\n  const menu = document.createElement(\"div\");\n  menu.classList.add(\"menu\");\n\n  const menuTitle = document.createElement(\"h1\");\n  menuTitle.textContent = \"Our Menu\";\n  menuTitle.classList.add(\"menu-title\");\n  main.appendChild(menuTitle);\n\n  menu.appendChild(\n    createMenuItem(\n      \"Bibimbap\",\n      _src_images_korean_food_bibimbap_jpg__WEBPACK_IMPORTED_MODULE_0__,\n      \"Delicious Korean rice dish with mixed vegetables, meat, sesame oil, and gochujang\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Jajangmyeon\",\n      _src_images_korean_food_jajangmyeon_jpg__WEBPACK_IMPORTED_MODULE_1__,\n      \"Korean noodle dish consisting of a rich, dark sauce made from black bean paste then poured over fresh noodles\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Kimbap\",\n      _src_images_korean_food_kimbap_jpg__WEBPACK_IMPORTED_MODULE_2__,\n      \"Made from cooked rice, vegetables, egg and meat rolled in gim (a dried sheet of seaweed)\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Naengmyeon\",\n      _src_images_korean_food_naengmyeon_jpg__WEBPACK_IMPORTED_MODULE_3__,\n      \"Buckwheat noodles served in a cold broth made with beef brisket or beef shank\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Samgyetang\",\n      _src_images_korean_food_samgyetang_jpg__WEBPACK_IMPORTED_MODULE_4__,\n      \"Traditional korean soup made with a whole young chicken stuffed with sticky rice, ginseng, jujube, garlic and ginger\"\n    )\n  );\n  menu.appendChild(\n    createMenuItem(\n      \"Tteokbokki\",\n      _src_images_korean_food_tteokbokki_jpg__WEBPACK_IMPORTED_MODULE_5__,\n      \"Korean street food made with chewy rice cakes stir-fried in a spicy-sweet gochujang sauce\"\n    )\n  );\n\n  return menu;\n}\n\nfunction createMenuItem(name, imageUrl, description) {\n  const menuItem = document.createElement(\"div\");\n  menuItem.classList.add(\"menu-item\");\n\n  const menuItemName = document.createElement(\"h2\");\n  menuItemName.textContent = name;\n\n  const menuItemDescription = document.createElement(\"p\");\n  menuItemDescription.textContent = description;\n\n  const menuItemImage = document.createElement(\"img\");\n  menuItemImage.src = imageUrl;\n  menuItemImage.alt = `An image of ${name}`;\n\n  menuItem.appendChild(menuItemName);\n  menuItem.appendChild(menuItemImage);\n  menuItem.appendChild(menuItemDescription);\n\n  return menuItem;\n}\n\nfunction loadMenu() {\n  const main = document.getElementById(\"main\");\n  main.textContent = \"\";\n  main.appendChild(createMenu());\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ }),
 
@@ -197,6 +197,66 @@ eval("module.exports = __webpack_require__.p + \"eea80413f2f77fb1b1bd.jpg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"b0f8c0886292ee8e680e.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/chefs.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/korean-food/bibimbap.jpg":
+/*!*********************************************!*\
+  !*** ./src/images/korean-food/bibimbap.jpg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b55a46ce41c95f010a4e.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/korean-food/bibimbap.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/korean-food/jajangmyeon.jpg":
+/*!************************************************!*\
+  !*** ./src/images/korean-food/jajangmyeon.jpg ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"703d140fe00130fdf6a5.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/korean-food/jajangmyeon.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/korean-food/kimbap.jpg":
+/*!*******************************************!*\
+  !*** ./src/images/korean-food/kimbap.jpg ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"d3f48217de0dfd8aab8a.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/korean-food/kimbap.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/korean-food/naengmyeon.jpg":
+/*!***********************************************!*\
+  !*** ./src/images/korean-food/naengmyeon.jpg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"bd9a1f5983ee31f4cc01.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/korean-food/naengmyeon.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/korean-food/samgyetang.jpg":
+/*!***********************************************!*\
+  !*** ./src/images/korean-food/samgyetang.jpg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a01fb7096954531ff0eb.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/korean-food/samgyetang.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/korean-food/tteokbokki.jpg":
+/*!***********************************************!*\
+  !*** ./src/images/korean-food/tteokbokki.jpg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"fbc29f3a3e6f680447f3.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/images/korean-food/tteokbokki.jpg?");
 
 /***/ })
 
