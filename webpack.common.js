@@ -2,11 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.js",
+  devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      favicon: "./src/images/icons/favicon.ico",
       filename: "index.html",
       inject: "head",
       scriptLoading: "defer",
